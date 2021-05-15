@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+    <div id="dictionary">
+        <div class="letters">
+            <div class="letter" id="letter-a">
+                <h3><a>A</a></h3>
+            </div>
+            <div class="letter" id="letter-b">
+                <h3><a href="entries-a.html">B</a></h3>
+            </div>
+            <div class="letter" id="letter-c">
+                <h3><a href="entries-a.html">C</a></h3>
+            </div>
+            <div class="letter" id="letter-d">
+                <h3><a href="entries-a.html">D</a></h3>
+            </div>
+            <!-- and so on -->
+        </div>
+    </div>
+</body>
+<script>
+    $(document).ready(function() {
+        $('#letter-a').click(function(event) {
+            event.preventDefault();
+            $('#letter-d').load('entries-a.html');
+        });
+    });
+</script>
+
+</html>
